@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#222</color>
+    <color name="colorPrimaryDark">#262E37</color>
+    <color name="colorAccent">#4797AB</color>
+    <color name="colorPrimaryText">#FFFFFF</color>
+    <color name="colorSecondaryText">#BDBDBD</color>
+    <color name="colorTextBlack">#222</color>
+    <color name="colorIcon">#FFFFFF</color>
+    <color name="colorDivider">#BDBDBD</color>
+    <color name="colorChatBg">#CCC</color>
+
+    <color name="colorSentBg">#82cfa4</color>
+
+    <color name="colorGooglePlus">#DD4B39</color>
+    <color name="colorGooglePlusDark">#B92D21</color>
+
+    <color name="colorWhite">#FFF</color>
+    <color name="colorRed">#ba160c</color>
+    <color name="colorBlue">#3893e8</color>
+    <color name="mansoNaranja">#F6941E</color>
+    <color name="mansoNaranjaOscuro">#c46210</color>
+    <color name="mansoGris">#cfc8c0</color>
+</resources>

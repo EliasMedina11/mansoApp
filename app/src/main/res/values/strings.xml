@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">MansoApp</string>
+
+    <!---Login View -->
+
+    <string name="login_email">Email</string>
+    <string name="login_password">Contraseña</string>
+    <string name="login_confirm_password">Confirmar Contraseña</string>
+    <string name="login_sign_in">Ingresa</string>
+    <string name="login_sign_out">Deslogearse</string>
+    <string name="login_reset_password">Reestablece mi contraseña</string>
+    <string name="login_sign_in_google">Registrate con Google</string>
+    <string name="login_forgot_password">He olvidado mi contraseña</string>
+    <string name="login_create_account">Crea una nueva cuenta</string>
+    <string name="login_go_logint">Volver al Login</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="sign_up">Registrate</string>
+
+    <!--Bottom Navigation Menu -->
+
+    <string name="navigation_bottom_info">Info</string>
+    <string name="navigation_bottom_poll">Votos</string>
+    <string name="navigation_bottom_chat">Chat</string>
+    <string name="chat_editText_message_hint">Escribe un mensaje...</string>
+
+
+    <string name="info_label_messages">Total de mensajes en el chat: </string>
+    <string name="info_no_name">Nombre no esta disponible</string>
+
+    <!-- xXxX -->
+
+
+</resources>
