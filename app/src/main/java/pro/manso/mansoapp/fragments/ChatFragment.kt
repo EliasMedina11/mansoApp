@@ -19,6 +19,8 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.*
 import kotlinx.android.synthetic.main.fragment_chat.*
 import kotlinx.android.synthetic.main.fragment_chat.view.*
+import pro.manso.mansoapp.models.TotalMessagesEvent
+import pro.manso.mansoapp.utils.RxBus
 import java.util.*
 import java.util.EventListener
 
@@ -121,6 +123,7 @@ class ChatFragment : Fragment() {
                             messageList.addAll(messages.asReversed())
                             adapter.notifyDataSetChanged()
                             _view.recyclerView.smoothScrollToPosition(messageList.size)
+                            RxBus.publish(TotalMessagesEvent(messageList.size))
                         }
                     }
                 })

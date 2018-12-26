@@ -32,7 +32,6 @@ class PollFragment : Fragment() {
 
     private val timer = countDownTimer(10000, 1000)
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         _view = inflater.inflate(R.layout.fragment_rates, container, false)
@@ -189,8 +188,6 @@ class PollFragment : Fragment() {
             _view.buttonOption4.setBackgroundResource(R.drawable.vote_button_ripple)
             _view.buttonOption5.setBackgroundResource(R.drawable.vote_button_ripple)
             _view.buttonOption6.setBackgroundResource(R.drawable.vote_button_ripple)
-
-
         }
 
         override fun onTick(p0: Long) {

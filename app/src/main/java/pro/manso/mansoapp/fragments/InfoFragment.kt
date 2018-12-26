@@ -15,7 +15,9 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.*
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_info.view.*
+import pro.manso.mansoapp.models.TotalMessagesEvent
 import pro.manso.mansoapp.utils.CircleTransform
+import pro.manso.mansoapp.utils.RxBus
 import java.util.EventListener
 
 
@@ -45,7 +47,8 @@ class InfoFragment : Fragment() {
         */
 
         //Total messages Firebase style
-        subscribeToTotalMessagesFirebaseStyle()
+        //subscribeToTotalMessagesFirebaseStyle()
+        subscribeToTotalMessagesEventBusReactiveStyle()
 
         return _view
     }
@@ -105,6 +108,12 @@ class InfoFragment : Fragment() {
             }
 
         })
+    }
+
+    private fun subscribeToTotalMessagesEventBusReactiveStyle(){
+        RxBus.listen(TotalMessagesEvent::class.java).subscribe {
+            _view.textViewInfoTotalMessages.text = "${it.total}"
+        }
     }
 
     override fun onDestroyView() {
