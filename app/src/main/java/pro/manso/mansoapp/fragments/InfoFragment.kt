@@ -15,10 +15,13 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.*
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_info.view.*
+import pro.manso.mansoapp.getBiggerImage
 import pro.manso.mansoapp.models.TotalMessagesEvent
 import pro.manso.mansoapp.utils.CircleTransform
 import pro.manso.mansoapp.utils.RxBus
 import java.util.EventListener
+import com.google.firebase.storage.StorageReference
+import com.google.firebase.storage.FirebaseStorage
 
 
 class InfoFragment : Fragment() {
@@ -33,10 +36,16 @@ class InfoFragment : Fragment() {
 
     private var chatSubscription: ListenerRegistration? = null
 
+    private var voteCount = 0
+    private var voteCount2 = 0
+
+    private lateinit var mStorageRef: StorageReference
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         _view = inflater.inflate(R.layout.fragment_info, container, false)
 
+        mStorageRef = FirebaseStorage.getInstance().reference
         setUpChatDB()
         setUpCurrentUser()
         setUpCurrentUserInformation()
@@ -49,17 +58,16 @@ class InfoFragment : Fragment() {
         //Total messages Firebase style
         //subscribeToTotalMessagesFirebaseStyle()
         subscribeToTotalMessagesEventBusReactiveStyle()
-
+      //  observeRates()
         return _view
     }
 
-    private fun setUpCurrentUser() {
+     fun setUpCurrentUser() {
         currentUser = mAuth.currentUser!!
     }
 
     private fun setUpChatDB() {
         chatDBRef = store.collection("chat")
-
     }
 
     private fun setUpCurrentUserInformation() {
@@ -67,10 +75,10 @@ class InfoFragment : Fragment() {
         _view.textViewInfoName.text = currentUser.displayName?.let { it } ?: run { currentUser.email.toString() }
 
         currentUser.photoUrl?.let {
-            Picasso.get().load(currentUser.photoUrl).resize(300, 300)
+            Picasso.with(context).load(getBiggerImage(currentUser)).resize(300, 300)
                     .centerCrop().transform(CircleTransform()).into(_view.imageViewInfoAvatar)
         } ?: run {
-            Picasso.get().load(R.drawable.background_manso_main).resize(300, 300)
+            Picasso.with(context).load(R.drawable.background_manso_main).resize(300, 300)
                     .centerCrop().transform(CircleTransform()).into(_view.imageViewInfoAvatar)
         }
 
@@ -81,12 +89,11 @@ class InfoFragment : Fragment() {
 
             val builder = AlertDialog.Builder(this.context)
             builder.setTitle("Profile Image")
-            builder.setMessage("Do you want to change your name?")
-            builder.setPositiveButton("YES") { dialog, which ->
-
+            builder.setMessage("¿Quieres cambiar tu imagen de perfil?")
+            builder.setPositiveButton("SI") { _, _ ->
             }
 
-            builder.setNegativeButton("No") { dialog, which ->
+            builder.setNegativeButton("NO") { dialog, _ ->
                 dialog.dismiss()
             }
 

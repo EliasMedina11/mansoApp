@@ -45,7 +45,7 @@
         android:layout_height="25dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/raleway"
         android:text="@string/info_label_messages"
         android:textColor="@android:color/white"
@@ -122,4 +122,44 @@
         android:src="@drawable/manso_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewVote2"
+        android:layout_width="70dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@color/colorRed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInfoLabelChat"
+        app:layout_constraintVertical_bias="0.843" />
+
+    <ImageView
+        android:id="@+id/imageViewVote1"
+        android:layout_width="70dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:src="@color/colorBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageViewVote2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInfoLabelChat"
+        app:layout_constraintVertical_bias="0.84000003" />
+
+    <TextView
+        android:id="@+id/textViewVoteCount1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text=" "
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewVote1"
+        app:layout_constraintStart_toEndOf="@+id/imageViewVote2" />
+
 </android.support.constraint.ConstraintLayout>

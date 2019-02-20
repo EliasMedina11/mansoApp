@@ -91,19 +91,16 @@
 
         <Button
             android:id="@+id/buttonLogInGoogle"
-            android:layout_width="45dp"
-            android:layout_height="35dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/google_signin"
             android:textColor="@color/colorPrimaryText"
             app:layout_constraintBottom_toTopOf="@+id/buttonCreateAccount"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.323" />
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <Button
             android:id="@+id/buttonCreateAccount"
@@ -124,7 +121,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="25dp"
+            android:layout_marginEnd="32dp"
             android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/editTextEmail"
             app:layout_constraintEnd_toEndOf="@+id/editTextEmail"
@@ -136,7 +133,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="25dp"
             android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/editTextPassword"
             app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
@@ -180,6 +177,33 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/buttonCreateAccount"
             app:srcCompat="@drawable/manso_logo" />
+
+
+        <Button
+            android:id="@+id/buttonFacebookLogInTrue"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/manso_facebook"
+            app:layout_constraintBottom_toTopOf="@+id/buttonCreateAccount"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toEndOf="@+id/buttonLogInGoogle"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/buttonFacebookLogIn"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/buttonCreateAccount"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toEndOf="@+id/buttonLogInGoogle"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     </android.support.constraint.ConstraintLayout>
 

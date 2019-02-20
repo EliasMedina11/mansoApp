@@ -19,7 +19,10 @@
 
     <style name= "NoPreview" parent="AppTheme">
         <item name ="android:windowDisablePreview"> true</item>
+    </style>
 
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/splash_background</item>
     </style>
 
 </resources>

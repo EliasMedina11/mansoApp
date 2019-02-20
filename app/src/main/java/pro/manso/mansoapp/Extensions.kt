@@ -9,8 +9,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseUser
 import java.util.regex.Pattern
-
 
 fun Activity.toast(message: CharSequence, duration: Int = Toast.LENGTH_SHORT) = Toast.makeText(this,message,duration).show()
 
@@ -58,6 +58,28 @@ fun isValidEmail (email: String): Boolean{
  fun isValidConfirmPassword (password: String, confirmPassword: String): Boolean{
     return password == confirmPassword
 }
+
+fun getBiggerImage (currentUser: FirebaseUser): String{
+    return if(currentUser.providers?.get(0).toString() == "google.com"){
+        "${currentUser.photoUrl}".replace("s96-c/photo.jpg", "s400-c/photo.jpg")
+        //  "${currentUser.photoUrl.toString().substring(0, currentUser.photoUrl.toString().length - 15)}s400-c/photo.jpg"
+    } else {
+        "${currentUser.photoUrl}?type=large"
+    }
+}
+
+/*fun getBiggerImageLeft (message: Message): String{
+    val imagePath = if(message.providers?.get(0).toString() == "google.com"){
+        "${currentUser.photoUrl}".replace("s96-c/photo.jpg", "s400-c/photo.jpg")
+        //  "${currentUser.photoUrl.toString().substring(0, currentUser.photoUrl.toString().length - 15)}s400-c/photo.jpg"
+    } else {
+        "${currentUser.photoUrl}?type=large"
+    }
+    return imagePath
+}
+
+*/
+
 
 
 

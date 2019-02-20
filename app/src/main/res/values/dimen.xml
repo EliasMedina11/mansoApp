@@ -7,4 +7,6 @@
     <dimen name="login_button_xl_height">40dp</dimen>
     <dimen name="login_text_xl_size">18sp</dimen>
     <dimen name="login_text_size">15sp</dimen>
+    <dimen name="max_height_vote">500dp</dimen>
+    <dimen name="plus_five">5dp</dimen>
 </resources>

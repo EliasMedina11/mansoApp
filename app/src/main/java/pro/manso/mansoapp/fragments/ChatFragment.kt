@@ -87,7 +87,6 @@ class ChatFragment : Fragment() {
 
     private fun setUpChatDB() {
         chatDBRef = store.collection("chat")
-
     }
 
     private fun saveMessage(message: Message) {

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>vote_clean</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>vote_enabled</key>
+        <value>false</value>
+    </entry>
+</defaultsMap>

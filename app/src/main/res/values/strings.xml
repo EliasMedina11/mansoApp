@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">MansoApp</string>
+    <string name="facebook_app_id">1576926172408278</string>
+    <string name="fb_login_protocol_scheme">fb1576926172408278</string>
 
     <!---Login View -->
 
@@ -26,6 +28,9 @@
 
     <string name="info_label_messages">Total de mensajes en el chat: </string>
     <string name="info_no_name">Nombre no esta disponible</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- xXxX -->
 

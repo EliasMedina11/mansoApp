@@ -15,6 +15,30 @@
       },
       "oauth_client": [
         {
+          "client_id": "1024587819929-gdg3pqd55hrpe77urde7t2dn44fsvj79.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pro.manso.mansoapp",
+            "certificate_hash": "1a5767f3363c7d9c5b650b3bd8b0c5704bab43fc"
+          }
+        },
+        {
+          "client_id": "1024587819929-qumb28qp128vrmr0k7ibfqmove8kjtar.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pro.manso.mansoapp",
+            "certificate_hash": "01dfe57229dad0b86751e2c4853cb2c60e79b278"
+          }
+        },
+        {
+          "client_id": "1024587819929-ve5q2v0gjia361dt16rj7nejn6sd576u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pro.manso.mansoapp",
+            "certificate_hash": "d7ac394f162de5cb863ed9fe8137f612bf444784"
+          }
+        },
+        {
           "client_id": "1024587819929-1tv9eveto4jkpb9rq1qjiq2o2mrerkus.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +53,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024587819929-1tv9eveto4jkpb9rq1qjiq2o2mrerkus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
